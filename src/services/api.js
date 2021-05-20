@@ -8,7 +8,7 @@ export default {
     all() {
         return api.get('/all')
     },
-    listen() {
-
+    listen(codes = []) {
+        return api.get(`/all/${codes.join()}`)
     }
 }
